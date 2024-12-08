@@ -1,6 +1,7 @@
 using DoQR.EmployeeRegister.Domain.Repositories;
 using DoQR.EmployeeRegister.Infrastructure.Data;
 using DoQR.EmployeeRegister.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,18 +23,39 @@ builder.Services.AddScoped<IFuncionarioRepository, FuncionarioRepository>();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Cria o aplicativo
 var app = builder.Build();
 
-// Configura o Swagger no pipeline de middleware
+// Configurações do pipeline de middleware
 if (app.Environment.IsDevelopment())
 {
+    // Configura o Swagger no ambiente de desenvolvimento
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
+// Configura redirecionamento HTTPS
 app.UseHttpsRedirection();
+
+// Configura autorização
+app.UseAuthorization();
 
 // Configura o mapeamento dos controllers
 app.MapControllers();
 
+// Inicia o aplicativo
 app.Run();
+
+// Tornar a classe Program acessível para testes
+namespace DoQR.EmployeeRegister.Api
+{
+    public partial class Program
+    {
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<IStartup>();
+                });
+    }
+}
