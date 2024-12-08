@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD Pipeline
 
 on:
   push:
@@ -9,23 +9,23 @@ on:
       - main
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout código
-        uses: actions/checkout@v3
+    - name: Checkout código
+      uses: actions/checkout@v3
 
-      - name: Configurar .NET
-        uses: actions/setup-dotnet@v3
-        with:
-          dotnet-version: 8.0
+    - name: Configurar .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0
 
-      - name: Restaurar dependências
-        run: dotnet restore
+    - name: Restaurar dependências
+      run: dotnet restore
 
-      - name: Compilar
-        run: dotnet build --no-restore --configuration Release
+    - name: Build do projeto
+      run: dotnet build --no-restore --configuration Release
 
-      - name: Executar testes
-        run: dotnet test --no-restore --configuration Release
+    - name: Executar testes
+      run: dotnet test --no-restore --configuration Release
