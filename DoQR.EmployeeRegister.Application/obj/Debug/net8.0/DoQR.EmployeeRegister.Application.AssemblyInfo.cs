@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DoQR.EmployeeRegister.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1497f6c454aa27fe10f4b26b167ea06872ab9e41")]
 [assembly: System.Reflection.AssemblyProductAttribute("DoQR.EmployeeRegister.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DoQR.EmployeeRegister.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
