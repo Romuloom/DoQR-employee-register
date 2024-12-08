@@ -1,0 +1,6 @@
+@DoQR.EmployeeRegister.Api_HostAddress = http://localhost:5190
+
+GET {{DoQR.EmployeeRegister.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
