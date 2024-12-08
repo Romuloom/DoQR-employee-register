@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoQR.EmployeeRegister.Infra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoQR.EmployeeRegister.Api", "DoQR.EmployeeRegister.Api\DoQR.EmployeeRegister.Api.csproj", "{E2D19E6F-454D-4423-AA6D-61321F8D0308}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoQR.EmployeeRegister.Tests", "DoQR.EmployeeRegister.Tests\DoQR.EmployeeRegister.Tests.csproj", "{3E6664C6-A8AD-4E08-A9B8-5381B32DF71A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{E2D19E6F-454D-4423-AA6D-61321F8D0308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2D19E6F-454D-4423-AA6D-61321F8D0308}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2D19E6F-454D-4423-AA6D-61321F8D0308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E6664C6-A8AD-4E08-A9B8-5381B32DF71A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E6664C6-A8AD-4E08-A9B8-5381B32DF71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E6664C6-A8AD-4E08-A9B8-5381B32DF71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E6664C6-A8AD-4E08-A9B8-5381B32DF71A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
