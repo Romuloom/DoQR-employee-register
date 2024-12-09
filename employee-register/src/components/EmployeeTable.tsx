@@ -23,7 +23,7 @@ export default function EmployeeTable() {
   ];
 
   return (
-    <div className="overflow-x-auto p-6 px-28">
+    <div className="overflow-x-auto p-6 px-36">
       <table className="w-full bg-white shadow-md rounded-lg border border-gray-300">
         {/* Cabeçalho */}
         <thead className="bg-gray-100">
